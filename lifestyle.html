@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>
+  // Apply the saved theme before first paint to avoid a flash of the
+  // wrong theme (OS dark preference vs. the user's explicit choice).
+  try {
+    var t = localStorage.getItem("theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lifestyle – Yannik Kadjie</title>
+<meta name="description" content="Yannik Kadjie's reads, favorite quotes, and photography. He's a software engineer, but photography is also one of his passions.">
+<link rel="canonical" href="https://yannik-kadjie.vercel.app/lifestyle.html">
+<link rel="alternate" type="application/rss+xml" title="Yannik Kadjie's RSS feed" href="rss.xml">
+<meta name="theme-color" content="#f08a0c">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Icon sprite (kept in sync with assets/icons.svg), inlined per page
+     because a <use> referencing an external file is blocked under file://. -->
+<svg style="display:none">
+  <symbol id="icon-email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/>
+  </symbol>
+  <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/>
+  </symbol>
+  <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.45-1.17-1.11-1.48-1.11-1.48-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.95.68 1.92 0 1.39-.01 2.51-.01 2.85 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/>
+  </symbol>
+  <symbol id="icon-rss" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-x" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+  </symbol>
+</svg>
+
+
+<header class="site-header">
+  <div class="wrap header-top">
+    <button type="button" id="avatar-btn" class="avatar" aria-label="View photo">
+      <img id="avatar-img" src="assets/avatar.jpg" alt="Yannik Kadjie" width="800" height="800">
+    </button>
+    <div class="titles">
+      <h1>Yannik Kadjie</h1>
+      <p class="subtitle">Software Engineer</p>
+    </div>
+    <div class="header-actions">
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button type="button" class="lang-btn" title="French version coming soon" aria-disabled="true">EN</button>
+      <a class="btn btn-primary desktop-only" href="mailto:yannik.kadjie@gmail.com">Contact<span class="btn-icon"><svg viewBox="0 0 32 32" width="14" height="14" fill="currentColor"><path d="M7.483 22.524 9.37 24.41l11.314-11.313v10.37h2.677V8.533H8.426v2.677h10.37L7.483 22.524Z"/></svg></span></a>
+      <button id="menu-toggle" class="menu-toggle mobile-only" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="wrap main-nav desktop-only">
+    <a href="index.html">Home</a>
+    <a href="apropos.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projets.html">Work</a>
+    <a href="blog.html">Blog</a>
+    <a href="lifestyle.html" class="active">Lifestyle</a>
+  </nav>
+</header>
+
+<div class="nav-overlay" id="nav-overlay">
+  <nav class="overlay-nav">
+    <a href="index.html">Home</a>
+    <a href="apropos.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projets.html">Work</a>
+    <a href="blog.html">Blog</a>
+    <a href="lifestyle.html" class="active">Lifestyle</a>
+  </nav>
+  <div class="overlay-lang" title="French version coming soon" aria-disabled="true">EN</div>
+  <a class="btn btn-primary overlay-contact" href="mailto:yannik.kadjie@gmail.com">Contact<span class="btn-icon"><svg viewBox="0 0 32 32" width="14" height="14" fill="currentColor"><path d="M7.483 22.524 9.37 24.41l11.314-11.313v10.37h2.677V8.533H8.426v2.677h10.37L7.483 22.524Z"/></svg></span></a>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close photo">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div>
+
+<main>
+
+  <section class="wrap hero">
+    <h2>Lifestyle</h2>
+    <p class="lede">Reads, quotes, and photography. Software is my job, photography is one of my passions.</p>
+  </section>
+
+  <section class="wrap section">
+    <div class="section-head"><h3>Reads</h3></div>
+    <div class="books-grid">
+      <article class="book-card">
+        <img src="assets/books/purpose-driven-life.jpg" alt="Cover of The Purpose Driven Life (Une vie motivée par l'essentiel) by Rick Warren" width="500" height="702" loading="lazy">
+        <h4>The Purpose Driven Life</h4>
+        <p>Rick Warren</p>
+      </article>
+      <article class="book-card">
+        <img src="assets/books/plus-pur-que-le-diamant.jpg" alt="Cover of Plus pur que le diamant by Suzanna De Ferrières" width="500" height="750" loading="lazy">
+        <h4>Plus pur que le diamant</h4>
+        <p>Suzanna De Ferrières</p>
+      </article>
+      <article class="book-card">
+        <img src="assets/books/guerir-lame-dune-femme.jpg" alt="Cover of Guérir l'Âme d'une Femme by Joyce Meyer" width="494" height="750" loading="lazy">
+        <h4>Guérir l'Âme d'une Femme</h4>
+        <p>Joyce Meyer</p>
+      </article>
+      <article class="book-card">
+        <img src="assets/books/developpez-votre-leadership.jpg" alt="Cover of Développez votre Leadership by John C. Maxwell" width="489" height="750" loading="lazy">
+        <h4>Développez votre Leadership</h4>
+        <p>John C. Maxwell</p>
+      </article>
+      <article class="book-card">
+        <img src="assets/books/101-principes-diriger.jpg" alt="Cover of 101 principes pour savoir diriger by Rudi Lack" width="486" height="750" loading="lazy">
+        <h4>101 principes pour savoir diriger</h4>
+        <p>Rudi Lack</p>
+      </article>
+      <article class="book-card">
+        <img src="assets/books/marriage-partner.jpg" alt="Cover of Making the Right Choice of a Marriage Partner, Vol. 2 by Dr Daniel Shu" width="500" height="375" loading="lazy">
+        <h4>Making the Right Choice of a Marriage Partner</h4>
+        <p>Dr Daniel Shu</p>
+      </article>
+      <article class="book-card">
+        <img src="assets/books/power-of-vision.jpg" alt="Cover of The Power Of Vision by Denis N. Ekobena" width="500" height="700" loading="lazy">
+        <h4>The Power Of Vision</h4>
+        <p>Denis N. Ekobena</p>
+      </article>
+      <article class="book-card">
+        <img src="assets/books/apprenez-programmer-c.jpg" alt="Cover of Apprenez à programmer en C ! by Mathieu Nebra" width="500" height="708" loading="lazy">
+        <h4>Apprenez à programmer en C !</h4>
+        <p>Mathieu Nebra (Mateo21), OpenClassrooms</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <div class="section-head"><h3>Quotes</h3></div>
+    <div class="empty-state">
+      <p>A selection of favorite quotes is coming soon.</p>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <div class="section-head"><h3>Photo gallery</h3></div>
+    <div class="empty-state">
+      <p>The gallery is coming soon.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="apropos.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="projets.html">Work</a>
+      <a href="blog.html">Blog</a>
+      <a href="lifestyle.html">Lifestyle</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Yannik Kadjie.</p>
+    <div class="social-links" id="footer-social">
+      <a href="mailto:yannik.kadjie@gmail.com" aria-label="Email" title="Email">
+        <svg width="20" height="20"><use href="#icon-email"></use></svg>
+      </a>
+      <a href="https://linkedin.com/in/yannik-kadjie" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <svg width="20" height="20"><use href="#icon-linkedin"></use></svg>
+      </a>
+      <a href="https://github.com/main-c" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg width="20" height="20"><use href="#icon-github"></use></svg>
+      </a>
+      <a href="https://x.com/yannikKadjie" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)">
+        <svg width="20" height="20"><use href="#icon-x"></use></svg>
+      </a>
+      <a href="rss.xml" aria-label="RSS feed" title="RSS feed">
+        <svg width="20" height="20"><use href="#icon-rss"></use></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

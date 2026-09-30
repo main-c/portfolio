@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Yannik Kadjie's Blog &amp; Tech</title>
+    <link>https://yannik-kadjie.vercel.app/</link>
+    <description>Notes on building software, working remotely, and life in Yaoundé.</description>
+    <language>en</language>
+    <!-- No posts yet. Add an <item> per article once Blog/Tech go live. -->
+  </channel>
+</rss>

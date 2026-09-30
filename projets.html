@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>
+  // Apply the saved theme before first paint to avoid a flash of the
+  // wrong theme (OS dark preference vs. the user's explicit choice).
+  try {
+    var t = localStorage.getItem("theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects - Yannik Kadjie, Software Engineer in Yaoundé</title>
+<meta name="description" content="Projects by Yannik Kadjie: OIM Bridges for the IOM, Kanbati, Possah and SeeDaily. Web scraping, QA, React front ends and Flutter mobile apps.">
+<link rel="canonical" href="https://yannik-kadjie.vercel.app/projets.html">
+<link rel="alternate" type="application/rss+xml" title="Yannik Kadjie's RSS feed" href="rss.xml">
+<meta name="theme-color" content="#f08a0c">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yannik Kadjie">
+<meta property="og:url" content="https://yannik-kadjie.vercel.app/projets.html">
+<meta property="og:title" content="Projects - Yannik Kadjie, Software Engineer in Yaoundé">
+<meta property="og:description" content="Projects by Yannik Kadjie: OIM Bridges for the IOM, Kanbati, Possah and SeeDaily. Web scraping, QA, React front ends and Flutter mobile apps.">
+<meta property="og:image" content="https://yannik-kadjie.vercel.app/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Projects - Yannik Kadjie, Software Engineer in Yaoundé",
+  "url": "https://yannik-kadjie.vercel.app/projets.html",
+  "description": "Projects by Yannik Kadjie: OIM Bridges for the IOM, Kanbati, Possah and SeeDaily. Web scraping, QA, React front ends and Flutter mobile apps.",
+  "author": {
+    "@type": "Person",
+    "name": "Yannik Kadjie",
+    "url": "https://yannik-kadjie.vercel.app/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "OIM Bridges",
+        "url": "https://yannik-kadjie.vercel.app/projet-oim-bridges.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Kanbati",
+        "url": "https://yannik-kadjie.vercel.app/projet-kanbati.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Possah",
+        "url": "https://yannik-kadjie.vercel.app/projet-possah.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "SeeDaily",
+        "url": "https://yannik-kadjie.vercel.app/projet-seedaily.html"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<!-- Icon sprite (kept in sync with assets/icons.svg), inlined per page
+     because a <use> referencing an external file is blocked under file://. -->
+<svg style="display:none">
+  <symbol id="icon-email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/>
+  </symbol>
+  <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/>
+  </symbol>
+  <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.45-1.17-1.11-1.48-1.11-1.48-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.95.68 1.92 0 1.39-.01 2.51-.01 2.85 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/>
+  </symbol>
+  <symbol id="icon-rss" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-x" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+  </symbol>
+  <!-- Tech logos from Simple Icons (CC0) -->
+  <symbol id="si-dart" viewBox="0 0 24 24" fill="currentColor"><path d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9-9C.303 14.5 0 13.795 0 13.105c0-.319.18-.818.316-1.105l3.789-7.895zm.679.679v11.787c.002.543.021 1.024.498 1.508L10.204 23h8.533v-4.263L4.784 4.784zm12.055-.678c-.899-.896-1.809-1.78-2.74-2.643-.302-.267-.567-.468-1.07-.462-.37.014-.87.195-.87.195L6.341 4.105l10.498.001z"/></symbol>
+  <symbol id="si-firebase" viewBox="0 0 24 24" fill="currentColor"><path d="M19.455 8.369c-.538-.748-1.778-2.285-3.681-4.569-.826-.991-1.535-1.832-1.884-2.245a146 146 0 0 0-.488-.576l-.207-.245-.113-.133-.022-.032-.01-.005L12.57 0l-.609.488c-1.555 1.246-2.828 2.851-3.681 4.64-.523 1.064-.864 2.105-1.043 3.176-.047.241-.088.489-.121.738-.209-.017-.421-.028-.632-.033-.018-.001-.035-.002-.059-.003a7.46 7.46 0 0 0-2.28.274l-.317.089-.163.286c-.765 1.342-1.198 2.869-1.252 4.416-.07 2.01.477 3.954 1.583 5.625 1.082 1.633 2.61 2.882 4.42 3.611l.236.095.071.025.003-.001a9.59 9.59 0 0 0 2.941.568q.171.006.342.006c1.273 0 2.513-.249 3.69-.742l.008.004.313-.145a9.63 9.63 0 0 0 3.927-3.335c1.01-1.49 1.577-3.234 1.641-5.042.075-2.161-.643-4.304-2.133-6.371m-7.083 6.695c.328 1.244.264 2.44-.191 3.558-1.135-1.12-1.967-2.352-2.475-3.665-.543-1.404-.87-2.74-.974-3.975.48.157.922.366 1.315.622 1.132.737 1.914 1.902 2.325 3.461zm.207 6.022c.482.368.99.712 1.513 1.028-.771.21-1.565.302-2.369.273a8 8 0 0 1-.373-.022c.458-.394.869-.823 1.228-1.279zm1.347-6.431c-.516-1.957-1.527-3.437-3.002-4.398-.647-.421-1.385-.741-2.194-.95.011-.134.026-.268.043-.4.014-.113.03-.216.046-.313.133-.689.332-1.37.589-2.025.099-.25.206-.499.321-.74l.004-.008c.177-.358.376-.719.61-1.105l.092-.152-.003-.001c.544-.851 1.197-1.627 1.942-2.311l.288.341c.672.796 1.304 1.548 1.878 2.237 1.291 1.549 2.966 3.583 3.612 4.48 1.277 1.771 1.893 3.579 1.83 5.375-.049 1.395-.461 2.755-1.195 3.933-.694 1.116-1.661 2.05-2.8 2.708-.636-.318-1.559-.839-2.539-1.599.79-1.575.952-3.28.479-5.072zm-2.575 5.397c-.725.939-1.587 1.55-2.09 1.856-.081-.029-.163-.06-.243-.093l-.065-.026c-1.49-.616-2.747-1.656-3.635-3.01-.907-1.384-1.356-2.993-1.298-4.653.041-1.19.338-2.327.882-3.379.316-.07.638-.114.96-.131l.084-.002c.162-.003.324-.003.478 0 .227.011.454.035.677.07.073 1.513.445 3.145 1.105 4.852.637 1.644 1.694 3.162 3.144 4.515z"/></symbol>
+  <symbol id="si-flutter" viewBox="0 0 24 24" fill="currentColor"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></symbol>
+  <!-- Tech logos from Simple Icons (CC0) -->
+  <symbol id="si-python" viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></symbol>
+  <symbol id="si-scrapy" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12 6.628 0 12-5.372 12-12 0-6.627-5.372-12-12-12Zm0 1.113c6.003 0 10.887 4.884 10.887 10.887S18.003 22.887 12 22.887 1.113 18.003 1.113 12 5.997 1.113 12 1.113Zm7.03 5.201c-.536-.002-1.28.304-2.255 1.098-1.052.858-3.814 3.045-3.814 3.045l1.025 1.3c4.694-2.558 6.19-3.167 6.116-4.294-.042-.634-.384-1.146-1.073-1.149Zm-.507.752c.147 0 .266.106.266.239 0 .132-.119.238-.266.238-.146 0-.265-.106-.265-.238 0-.171.162-.239.265-.239zm-1.58 1.489c0 .131-.118.238-.265.238-.147 0-.264-.107-.264-.238 0-.128.11-.234.24-.24.13-.006.29.077.29.24zm-2.109 1.01c.147 0 .266.106.266.238s-.12.238-.266.238c-.146 0-.266-.106-.266-.238 0-.148.139-.239.266-.239zm-2.445.972c-1.502.225-5.807.992-8.01 2.672l3.574 5.387s4.706-2.932 5.863-6.244z"/></symbol>
+  <!-- Tech logos from Simple Icons (CC0) -->
+  <symbol id="si-javascript" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></symbol>
+  <symbol id="si-react" viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></symbol>
+  <symbol id="si-shadcnui" viewBox="0 0 24 24" fill="currentColor"><path d="M22.219 11.784 11.784 22.219c-.407.407-.407 1.068 0 1.476.407.407 1.068.407 1.476 0L23.695 13.26c.407-.408.407-1.069 0-1.476-.408-.407-1.069-.407-1.476 0ZM20.132.305.305 20.132c-.407.407-.407 1.068 0 1.476.408.407 1.069.407 1.476 0L21.608 1.781c.407-.407.407-1.068 0-1.476-.408-.407-1.069-.407-1.476 0Z"/></symbol>
+  <symbol id="si-typescript" viewBox="0 0 24 24" fill="currentColor"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></symbol>
+</svg>
+
+
+<header class="site-header">
+  <div class="wrap header-top">
+    <button type="button" id="avatar-btn" class="avatar" aria-label="View photo">
+      <img id="avatar-img" src="assets/avatar.jpg" alt="Yannik Kadjie" width="800" height="800">
+    </button>
+    <div class="titles">
+      <h1>Yannik Kadjie</h1>
+      <p class="subtitle">Software Engineer</p>
+    </div>
+    <div class="header-actions">
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button type="button" class="lang-btn" title="French version coming soon" aria-disabled="true">EN</button>
+      <a class="btn btn-primary desktop-only" href="mailto:yannik.kadjie@gmail.com">Contact<span class="btn-icon"><svg viewBox="0 0 32 32" width="14" height="14" fill="currentColor"><path d="M7.483 22.524 9.37 24.41l11.314-11.313v10.37h2.677V8.533H8.426v2.677h10.37L7.483 22.524Z"/></svg></span></a>
+      <button id="menu-toggle" class="menu-toggle mobile-only" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="wrap main-nav desktop-only">
+    <a href="index.html">Home</a>
+    <a href="apropos.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projets.html" class="active">Work</a>
+    <a href="blog.html">Blog</a>
+    <a href="lifestyle.html">Lifestyle</a>
+  </nav>
+</header>
+
+<div class="nav-overlay" id="nav-overlay">
+  <nav class="overlay-nav">
+    <a href="index.html">Home</a>
+    <a href="apropos.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projets.html" class="active">Work</a>
+    <a href="blog.html">Blog</a>
+    <a href="lifestyle.html">Lifestyle</a>
+  </nav>
+  <div class="overlay-lang" title="French version coming soon" aria-disabled="true">EN</div>
+  <a class="btn btn-primary overlay-contact" href="mailto:yannik.kadjie@gmail.com">Contact<span class="btn-icon"><svg viewBox="0 0 32 32" width="14" height="14" fill="currentColor"><path d="M7.483 22.524 9.37 24.41l11.314-11.313v10.37h2.677V8.533H8.426v2.677h10.37L7.483 22.524Z"/></svg></span></a>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close photo">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div>
+
+<main>
+
+  <section class="wrap hero">
+    <h2>Projects</h2>
+    <p class="lede">Products I've worked on, from data collection and QA for an IOM platform to React front ends and Flutter mobile apps.</p>
+  </section>
+
+  <section class="wrap section">
+    <div class="work-grid work-grid-2">
+      <a class="work-card" href="projet-oim-bridges.html">
+        <div class="work-visual"><span class="work-logo" aria-hidden="true">OB<img src="assets/projects/oim-bridges.png" alt="" onerror="this.remove()"></span></div>
+        <h4>OIM Bridges</h4>
+        <p>IOM platform helping people on the move find jobs, training, and investment opportunities.</p>
+        <ul class="chips chips-sm">
+          <li style="--brand:#3776ab"><svg width="16" height="16" aria-hidden="true"><use href="#si-python"></use></svg>Python</li>
+          <li style="--brand:#60a839"><svg width="16" height="16" aria-hidden="true"><use href="#si-scrapy"></use></svg>Scrapy</li>
+          <li>Playwright</li>
+          <li>Beautiful Soup</li>
+          <li>Test automation</li>
+        </ul>
+      </a>
+      <a class="work-card" href="projet-kanbati.html">
+        <div class="work-visual"><span class="work-logo" aria-hidden="true">KA<img src="assets/projects/kanbati.png" alt="" onerror="this.remove()"></span></div>
+        <h4>Kanbati</h4>
+        <p>Site-management platform for construction firms, on web and mobile.</p>
+        <ul class="chips chips-sm">
+          <li style="--brand:#2ecefa"><svg width="16" height="16" aria-hidden="true"><use href="#si-react"></use></svg>React</li>
+          <li style="--brand:#3178c6"><svg width="16" height="16" aria-hidden="true"><use href="#si-typescript"></use></svg>TypeScript</li>
+          <li style="--brand:#f7df1e"><svg width="16" height="16" aria-hidden="true"><use href="#si-javascript"></use></svg>JavaScript</li>
+          <li style="--brand:var(--text)"><svg width="16" height="16" aria-hidden="true"><use href="#si-shadcnui"></use></svg>shadcn/ui</li>
+          <li>REST APIs</li>
+          <li>SEO</li>
+        </ul>
+      </a>
+      <a class="work-card" href="projet-possah.html">
+        <div class="work-visual"><span class="work-logo" aria-hidden="true">PO<img src="assets/projects/possah.png" alt="" onerror="this.remove()"></span></div>
+        <h4>Possah</h4>
+        <p>Send and receive money in Cameroon at the real exchange rate. 1,000+ Play Store downloads.</p>
+        <ul class="chips chips-sm">
+          <li style="--brand:#0375d3"><svg width="16" height="16" aria-hidden="true"><use href="#si-flutter"></use></svg>Flutter</li>
+          <li style="--brand:#0181d5"><svg width="16" height="16" aria-hidden="true"><use href="#si-dart"></use></svg>Dart</li>
+          <li>Android</li>
+        </ul>
+      </a>
+      <a class="work-card" href="projet-seedaily.html">
+        <div class="work-visual"><span class="work-logo" aria-hidden="true">SD<img src="assets/projects/seedaily.png" alt="" onerror="this.remove()"></span></div>
+        <h4>SeeDaily</h4>
+        <p>Daily Bible reading plans, curated or fully custom, with reading groups and offline mode.</p>
+        <ul class="chips chips-sm">
+          <li style="--brand:#0375d3"><svg width="16" height="16" aria-hidden="true"><use href="#si-flutter"></use></svg>Flutter</li>
+          <li style="--brand:#0181d5"><svg width="16" height="16" aria-hidden="true"><use href="#si-dart"></use></svg>Dart</li>
+          <li style="--brand:#dd2c00"><svg width="16" height="16" aria-hidden="true"><use href="#si-firebase"></use></svg>Firebase</li>
+          <li>Shorebird</li>
+          <li>Offline-first</li>
+        </ul>
+      </a>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="apropos.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="projets.html">Work</a>
+      <a href="blog.html">Blog</a>
+      <a href="lifestyle.html">Lifestyle</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Yannik Kadjie.</p>
+    <div class="social-links" id="footer-social">
+      <a href="mailto:yannik.kadjie@gmail.com" aria-label="Email" title="Email">
+        <svg width="20" height="20"><use href="#icon-email"></use></svg>
+      </a>
+      <a href="https://linkedin.com/in/yannik-kadjie" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <svg width="20" height="20"><use href="#icon-linkedin"></use></svg>
+      </a>
+      <a href="https://github.com/main-c" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg width="20" height="20"><use href="#icon-github"></use></svg>
+      </a>
+      <a href="https://x.com/yannikKadjie" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)">
+        <svg width="20" height="20"><use href="#icon-x"></use></svg>
+      </a>
+      <a href="rss.xml" aria-label="RSS feed" title="RSS feed">
+        <svg width="20" height="20"><use href="#icon-rss"></use></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
