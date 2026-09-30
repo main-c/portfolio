@@ -1,0 +1,5 @@
+# Files that must not be published on the site
+DEPLOY.md
+article-template.html
+yannik-kadjie.vercel.app-audit/
+assets/edited_portrait (1).png

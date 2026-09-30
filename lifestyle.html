@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTZ9JST12G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTZ9JST12G');
+</script>
 <meta charset="utf-8">
 <script>
   // Apply the saved theme before first paint to avoid a flash of the
@@ -11,7 +20,7 @@
   } catch (e) {}
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lifestyle – Yannik Kadjie</title>
+<title>Lifestyle - Yannik Kadjie</title>
 <meta name="description" content="Yannik Kadjie's reads, favorite quotes, and photography. He's a software engineer, but photography is also one of his passions.">
 <link rel="canonical" href="https://yannik-kadjie.vercel.app/lifestyle.html">
 <link rel="alternate" type="application/rss+xml" title="Yannik Kadjie's RSS feed" href="rss.xml">
@@ -20,6 +29,16 @@
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yannik-kadjie.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Lifestyle", "item": "https://yannik-kadjie.vercel.app/lifestyle.html" }
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Icon sprite (kept in sync with assets/icons.svg), inlined per page
@@ -99,69 +118,137 @@
 <main>
 
   <section class="wrap hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">← Home</a></li>
+        <li aria-current="page">Lifestyle</li>
+      </ol>
+    </nav>
     <h2>Lifestyle</h2>
     <p class="lede">Reads, quotes, and photography. Software is my job, photography is one of my passions.</p>
   </section>
 
   <section class="wrap section">
     <div class="section-head"><h3>Reads</h3></div>
-    <div class="books-grid">
-      <article class="book-card">
-        <img src="assets/books/purpose-driven-life.jpg" alt="Cover of The Purpose Driven Life (Une vie motivée par l'essentiel) by Rick Warren" width="500" height="702" loading="lazy">
-        <h4>The Purpose Driven Life</h4>
-        <p>Rick Warren</p>
-      </article>
-      <article class="book-card">
-        <img src="assets/books/plus-pur-que-le-diamant.jpg" alt="Cover of Plus pur que le diamant by Suzanna De Ferrières" width="500" height="750" loading="lazy">
-        <h4>Plus pur que le diamant</h4>
-        <p>Suzanna De Ferrières</p>
-      </article>
-      <article class="book-card">
-        <img src="assets/books/guerir-lame-dune-femme.jpg" alt="Cover of Guérir l'Âme d'une Femme by Joyce Meyer" width="494" height="750" loading="lazy">
-        <h4>Guérir l'Âme d'une Femme</h4>
-        <p>Joyce Meyer</p>
-      </article>
-      <article class="book-card">
-        <img src="assets/books/developpez-votre-leadership.jpg" alt="Cover of Développez votre Leadership by John C. Maxwell" width="489" height="750" loading="lazy">
-        <h4>Développez votre Leadership</h4>
-        <p>John C. Maxwell</p>
-      </article>
-      <article class="book-card">
-        <img src="assets/books/101-principes-diriger.jpg" alt="Cover of 101 principes pour savoir diriger by Rudi Lack" width="486" height="750" loading="lazy">
-        <h4>101 principes pour savoir diriger</h4>
-        <p>Rudi Lack</p>
-      </article>
-      <article class="book-card">
-        <img src="assets/books/marriage-partner.jpg" alt="Cover of Making the Right Choice of a Marriage Partner, Vol. 2 by Dr Daniel Shu" width="500" height="375" loading="lazy">
-        <h4>Making the Right Choice of a Marriage Partner</h4>
-        <p>Dr Daniel Shu</p>
-      </article>
-      <article class="book-card">
-        <img src="assets/books/power-of-vision.jpg" alt="Cover of The Power Of Vision by Denis N. Ekobena" width="500" height="700" loading="lazy">
-        <h4>The Power Of Vision</h4>
-        <p>Denis N. Ekobena</p>
-      </article>
-      <article class="book-card">
-        <img src="assets/books/apprenez-programmer-c.jpg" alt="Cover of Apprenez à programmer en C ! by Mathieu Nebra" width="500" height="708" loading="lazy">
-        <h4>Apprenez à programmer en C !</h4>
-        <p>Mathieu Nebra (Mateo21), OpenClassrooms</p>
-      </article>
+    <!-- Coverflow carousel: the centered book is zoomed in, the others are
+         tilted toward it. Without JS it falls back to a plain scroll strip. -->
+    <div class="reads" id="reads" tabindex="0" aria-roledescription="carousel" aria-label="Books I've read">
+      <div class="reads-stage" id="reads-stage">
+        <article class="book-card">
+          <img src="assets/books/purpose-driven-life.jpg" alt="Cover of The Purpose Driven Life (Une vie motivée par l'essentiel) by Rick Warren" width="500" height="702" loading="lazy">
+          <h4>The Purpose Driven Life</h4>
+          <p>Rick Warren</p>
+        </article>
+        <article class="book-card">
+          <img src="assets/books/plus-pur-que-le-diamant.jpg" alt="Cover of Plus pur que le diamant by Suzanna De Ferrières" width="500" height="750" loading="lazy">
+          <h4>Plus pur que le diamant</h4>
+          <p>Suzanna De Ferrières</p>
+        </article>
+        <article class="book-card">
+          <img src="assets/books/guerir-lame-dune-femme.jpg" alt="Cover of Guérir l'Âme d'une Femme by Joyce Meyer" width="494" height="750" loading="lazy">
+          <h4>Guérir l'Âme d'une Femme</h4>
+          <p>Joyce Meyer</p>
+        </article>
+        <article class="book-card">
+          <img src="assets/books/developpez-votre-leadership.jpg" alt="Cover of Développez votre Leadership by John C. Maxwell" width="489" height="750" loading="lazy">
+          <h4>Développez votre Leadership</h4>
+          <p>John C. Maxwell</p>
+        </article>
+        <article class="book-card">
+          <img src="assets/books/101-principes-diriger.jpg" alt="Cover of 101 principes pour savoir diriger by Rudi Lack" width="486" height="750" loading="lazy">
+          <h4>101 principes pour savoir diriger</h4>
+          <p>Rudi Lack</p>
+        </article>
+        <article class="book-card">
+          <!-- Landscape image: shown whole (contain) rather than cropped. -->
+          <img class="cover-fit" src="assets/books/marriage-partner.jpg" alt="Cover of Making the Right Choice of a Marriage Partner, Vol. 2 by Dr Daniel Shu" width="500" height="375" loading="lazy">
+          <h4>Making the Right Choice of a Marriage Partner</h4>
+          <p>Dr Daniel Shu</p>
+        </article>
+        <article class="book-card">
+          <img src="assets/books/power-of-vision.jpg" alt="Cover of The Power Of Vision by Denis N. Ekobena" width="500" height="700" loading="lazy">
+          <h4>The Power Of Vision</h4>
+          <p>Denis N. Ekobena</p>
+        </article>
+        <article class="book-card">
+          <img src="assets/books/apprenez-programmer-c.jpg" alt="Cover of Apprenez à programmer en C ! by Mathieu Nebra" width="500" height="708" loading="lazy">
+          <h4>Apprenez à programmer en C !</h4>
+          <p>Mathieu Nebra (Mateo21), OpenClassrooms</p>
+        </article>
+      </div>
+      <div class="reads-caption" id="reads-caption" aria-hidden="true">
+        <p class="reads-title" id="reads-title"></p>
+        <p class="reads-author" id="reads-author"></p>
+      </div>
+      <div class="reads-controls">
+        <button type="button" class="gallery-nav" id="reads-prev" aria-label="Previous book">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="reads-dots" id="reads-dots"></div>
+        <button type="button" class="gallery-nav" id="reads-next" aria-label="Next book">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
     </div>
   </section>
 
   <section class="wrap section">
     <div class="section-head"><h3>Quotes</h3></div>
-    <div class="empty-state">
-      <p>A selection of favorite quotes is coming soon.</p>
+    <div class="quotes-grid">
+      <blockquote>
+        <p>The only way to do great work is to love what you do.</p>
+        <cite>Steve Jobs</cite>
+      </blockquote>
+      <blockquote>
+        <p>Programs must be written for people to read, and only incidentally for machines to execute.</p>
+        <cite>Harold Abelson</cite>
+      </blockquote>
+      <blockquote>
+        <p>The best way to predict the future is to invent it.</p>
+        <cite>Alan Kay</cite>
+      </blockquote>
+      <blockquote>
+        <p>Simplicity is the soul of efficiency.</p>
+        <cite>Austin Freeman</cite>
+      </blockquote>
+      <blockquote>
+        <p>It always seems impossible until it's done.</p>
+        <cite>Nelson Mandela</cite>
+      </blockquote>
     </div>
   </section>
 
   <section class="wrap section">
     <div class="section-head"><h3>Photo gallery</h3></div>
-    <div class="empty-state">
+    <div class="gallery-scroller" id="gallery" hidden>
+      <div class="gallery-track" id="gallery-track"></div>
+    </div>
+    <div class="gallery-controls" id="gallery-controls" hidden>
+      <button type="button" class="gallery-nav" id="gallery-prev" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <span class="gallery-count" id="gallery-count">1 / 1</span>
+      <button type="button" class="gallery-nav" id="gallery-next" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+    <div class="empty-state" id="gallery-empty">
       <p>The gallery is coming soon.</p>
     </div>
   </section>
+
+  <div class="lightbox" id="gallery-lightbox">
+    <button type="button" class="lightbox-close" id="gallery-lightbox-close" aria-label="Close photo">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <button type="button" class="lightbox-nav lightbox-prev" id="gallery-lightbox-prev" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button type="button" class="lightbox-nav lightbox-next" id="gallery-lightbox-next" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+    <img id="gallery-lightbox-img" src="" alt="">
+  </div>
 
 </main>
 

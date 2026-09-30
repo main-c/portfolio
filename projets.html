@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTZ9JST12G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTZ9JST12G');
+</script>
 <meta charset="utf-8">
 <script>
   // Apply the saved theme before first paint to avoid a flash of the
@@ -68,6 +77,16 @@
       }
     ]
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yannik-kadjie.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://yannik-kadjie.vercel.app/projets.html" }
+  ]
 }
 </script>
 </head>
@@ -161,6 +180,12 @@
 <main>
 
   <section class="wrap hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">← Home</a></li>
+        <li aria-current="page">Work</li>
+      </ol>
+    </nav>
     <h2>Projects</h2>
     <p class="lede">Products I've worked on, from data collection and QA for an IOM platform to React front ends and Flutter mobile apps.</p>
   </section>

@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTZ9JST12G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTZ9JST12G');
+</script>
 <meta charset="utf-8">
 <script>
   // Apply the saved theme before first paint to avoid a flash of the
@@ -153,6 +162,16 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yannik-kadjie.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Experience", "item": "https://yannik-kadjie.vercel.app/experience.html" }
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Icon sprite (kept in sync with assets/icons.svg), inlined per page
@@ -263,6 +282,12 @@
 <main>
 
   <section class="wrap hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">← Home</a></li>
+        <li aria-current="page">Experience</li>
+      </ol>
+    </nav>
     <h2>Experience</h2>
     <hr class="hero-rule">
   </section>
@@ -390,11 +415,11 @@
     </ul>
   </section>
 
-  <section class="wrap section">
+  <section class="wrap section" id="skills">
     <div class="section-head"><h3>Skills</h3></div>
     <div class="skill-group">
       <h4>Backend</h4>
-      <ul class="chips">
+      <ul class="chips chips-animated">
         <li style="--brand:#3776ab"><svg width="16" height="16" aria-hidden="true"><use href="#si-python"></use></svg>Python</li>
         <li style="--brand:#00d6c2"><svg width="16" height="16" aria-hidden="true"><use href="#si-fastapi"></use></svg>FastAPI</li>
         <li style="--brand:#23b37d"><svg width="16" height="16" aria-hidden="true"><use href="#si-django"></use></svg>Django</li>
@@ -405,7 +430,7 @@
     </div>
     <div class="skill-group">
       <h4>Mobile &amp; Frontend</h4>
-      <ul class="chips">
+      <ul class="chips chips-animated">
         <li style="--brand:#0375d3"><svg width="16" height="16" aria-hidden="true"><use href="#si-flutter"></use></svg>Flutter</li>
         <li style="--brand:#0181d5"><svg width="16" height="16" aria-hidden="true"><use href="#si-dart"></use></svg>Dart</li>
         <li style="--brand:#2ecefa"><svg width="16" height="16" aria-hidden="true"><use href="#si-react"></use></svg>React</li>
@@ -419,7 +444,7 @@
     </div>
     <div class="skill-group">
       <h4>Data &amp; DevOps</h4>
-      <ul class="chips">
+      <ul class="chips chips-animated">
         <li style="--brand:#4169e1"><svg width="16" height="16" aria-hidden="true"><use href="#si-postgresql"></use></svg>PostgreSQL</li>
         <li style="--brand:#4479a1"><svg width="16" height="16" aria-hidden="true"><use href="#si-mysql"></use></svg>MySQL</li>
         <li style="--brand:#4581c3"><svg width="16" height="16" aria-hidden="true"><use href="#si-neo4j"></use></svg>Neo4j</li>
@@ -436,7 +461,7 @@
     </div>
     <div class="skill-group">
       <h4>Tools &amp; Automation</h4>
-      <ul class="chips">
+      <ul class="chips chips-animated">
         <li style="--brand:#f03c2e"><svg width="16" height="16" aria-hidden="true"><use href="#si-git"></use></svg>Git</li>
         <li style="--brand:#60a839"><svg width="16" height="16" aria-hidden="true"><use href="#si-scrapy"></use></svg>Scrapy</li>
         <li>Playwright</li>
